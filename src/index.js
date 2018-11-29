@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './styles/index.css';
+import App from './app';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import momentLocaliser from 'react-widgets';
+import { Provider } from 'react-redux';
+import Store from './store';
+import moment from "moment";
+import registerServiceWorker from './registerServiceWorker';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = Store();
+injectTapEventPlugin();
+momentLocaliser(moment);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+    <Provider store={store}>
+        <MuiThemeProvider muiTheme={getMuiTheme()}>
+            <App />
+        </MuiThemeProvider>
+    </Provider>,
+    document.getElementById('root')
+);
+
+registerServiceWorker();

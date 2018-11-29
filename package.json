@@ -3,19 +3,54 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.10.9",
+    "aws-sdk": "^2.366.0",
+    "babel-polyfill": "^6.26.0",
+    "html-react-parser": "^0.4.0",
+    "lodash": "^4.17.11",
+    "material-ui": "^0.20.2",
+    "moment": "^2.22.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.0.6",
+    "react-redux-form": "^1.12.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1",
+    "react-tap-event-plugin": "^3.0.3",
+    "react-widgets": "^4.4.7",
+    "redux": "^3.6.0",
+    "redux-form": "^7.0.3",
+    "redux-form-material-ui": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^4.1.2",
+    "webpack": "4.19.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-import": "^1.6.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "gh-pages": "^1.0.0",
+    "react": "^15.6.0",
+    "react-app-rewired": "^1.4.1",
+    "react-dom": "^15.6.0",
+    "react-edit-inline": "^1.0.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "main": "app.js",
+  "homepage": "/",
   "browserslist": [
     ">0.2%",
     "not dead",
