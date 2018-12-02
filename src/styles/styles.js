@@ -3,7 +3,7 @@ import { Layout, Menu } from 'antd';
 
 export const AppContent = styled(Layout.Content)`
     // max-width: 1170px;
-    margin: 0 auto;
+    //margin: 0 auto;
     padding: 0;
     background: #fff;
     .ant-tag-has-color {
@@ -35,7 +35,7 @@ export const NavBar = styled(Menu)`
             display: inline-block;
             line-height: 40px;
             margin: 0 5px 0 0;
-            /* vertical-align: middle; */
+            //vertical-align: middle;
             vertical-align: top;
             margin-top: 7px;
         }
@@ -43,7 +43,7 @@ export const NavBar = styled(Menu)`
 `;
 
 export const NavFormSandbox = styled.div`
-    width: 100%;
+    width: 10%;
     display: inline-block;
     vertical-align: top;
     text-align: right;

@@ -27,18 +27,15 @@ class Navbar extends Component {
 
     render() {
         return (
-            <Layout.Sider>
-                <NavFormSandbox>
-                    <Select defaultValue={this.props.serverHeader} onChange={this._onChange}>
-                        {_.map(servers, server => {
-                            return <Select.Option key={`server_${server}`} value={server}>{server}</Select.Option>;
-                        })}
-                    </Select>
-                    <Link to="/contentPush">
-                        <Button type="danger">Push Content To Sandbox</Button>
-                    </Link>
-                </NavFormSandbox>
-                <NavBar mode="vertical" theme="dark" style={{ width: '100%' }}>
+            <Layout.Header>
+                {/*<NavFormSandbox>*/}
+                    {/*<Select defaultValue={this.props.serverHeader} onChange={this._onChange}>*/}
+                        {/*{_.map(servers, server => {*/}
+                            {/*return <Select.Option key={`server_${server}`} value={server}>{server}</Select.Option>;*/}
+                        {/*})}*/}
+                    {/*</Select>*/}
+                {/*</NavFormSandbox>*/}
+                <NavBar mode="horizontal" theme="dark" style={{ width: '100%' }}>
                     {_.map(menuConfig, menu => {
                         return (
                             <Menu.Item key={menu.key}>
@@ -50,7 +47,7 @@ class Navbar extends Component {
                         );
                     })}
                 </NavBar>
-            </Layout.Sider>
+            </Layout.Header>
         );
     }
 }

@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
@@ -10,10 +11,13 @@ import moment from "moment";
 import registerServiceWorker from './registerServiceWorker';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import 'react-widgets/dist/css/react-widgets.css';
+// import 'react-virtualized/styles.css';
+import 'antd/dist/antd.css';
 
 const store = Store();
-injectTapEventPlugin();
-momentLocaliser(moment);
+// injectTapEventPlugin();
+// momentLocaliser(moment);
 
 ReactDOM.render(
     <Provider store={store}>

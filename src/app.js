@@ -13,7 +13,7 @@ class App extends Component {
         return (
             <Router>
                 <Layout style={{ height: '100vh' }}>
-                     <Navbar />
+                    <Navbar />
                     <AppContent>
                         <BreadcrumbsInstance props={this.props} />
                         <div style={{ padding: 20 }}>
