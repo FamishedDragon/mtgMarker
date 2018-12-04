@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import homeReducer from './scenes/Home/homeReducer';
-// import shopReducer from './scenes/Shop/shopReducer';
-// import turfWarReducer from "./scenes/TurfWar/turfWarReducer";
+import setsReducer from "./scenes/Sets/setsReducer";
 
 const rootReducer = combineReducers({
     homeReducer,
+    setsReducer,
     form: formReducer,
 });
 
