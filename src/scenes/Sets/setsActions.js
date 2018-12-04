@@ -3,7 +3,8 @@ import * as actionCreatorUtilities from "../../util/actionCreatorUtilities";
 
 var targetServer;
 const mockServer = 'demo3896162.mockable.io/'
-const SETS_API = 'api/sets/'
+const testServer = 'https://api.magicthegathering.io/v1/'
+const SETS_API = 'sets/'
 
 const REQUEST_SETS = 'REQUEST_SETS'
 const RECEIVE_SETS = 'RECEIVE_SETS'
@@ -13,16 +14,13 @@ export function fetchSets() {
     return (dispatch, getState) => {
         dispatch(requestSets());
         //targetServer = getState().homeReducer.targetServer;
-        targetServer = mockServer
+        targetServer = testServer
         return fetch(targetServer + SETS_API)
             .then(response => response.json())
             .then(json => dispatch(receiveSets(json)))
-            .catch(function() {
+            .catch(err => {
                 // If this sandbox doesnt have the endpoints, use mock endpoints
-                console.log('ERROR IN DATA ENDPOINT')
-                console.warn('USING MOCK DATA! (sets)')
-                dispatch(mockRequestSets())
-                // dispatch(fetchMockTurfWarData())
+                console.warn('ERROR IN DATA ENDPOINT', err)
             })
     };
 }
@@ -35,23 +33,11 @@ function requestSets() {
 }
 
 function receiveSets(json) {
+    console.log('SETS DATA', json)
     let data = actionCreatorUtilities.parseDateStringsToISO(json.data)
     return {
         type: RECEIVE_SETS,
-        mtgSets: data,
+        mtgSets: json.sets,
         receivedAt: Date.now(),
     };
-}
-
-function mockRequestSets() {
-    return (dispatch, getState) => {
-        dispatch(requestSets());
-        return setTimeout(() => {
-            dispatch( {
-                type: RECEIVE_SETS,
-                mtgSets: [{name: 'Alpha', year: 1993}, {name: 'Arabian Nights', year: 1993}],
-                receivedAt: Date.now(),
-            })
-        }, 5000)
-    }
 }

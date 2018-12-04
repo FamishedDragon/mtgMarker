@@ -7,6 +7,7 @@ class Loading extends Component {
         return (
             <div>
                 <p>LOADING...</p>
+                <Icon type="loading" spin={true} />
             </div>
         )
     }

@@ -11,6 +11,7 @@
     "lodash": "^4.17.11",
     "material-ui": "^0.20.2",
     "moment": "^2.22.2",
+    "mtgsdk": "^0.4.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^5.0.6",
