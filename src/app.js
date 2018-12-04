@@ -7,6 +7,7 @@ import { AppContent } from './styles/styles';
 import BreadcrumbsInstance from './components/Breadcrumbs/Breadcrumbs';
 import Navbar from './components/Navbar';
 import Home from "./scenes/Home/home";
+import SetsContainer from "./scenes/Sets/SetsContainer";
 
 class App extends Component {
     render() {
@@ -25,6 +26,8 @@ class App extends Component {
                                     path="/index.html"
                                     component={Home}
                                 />
+                                {/*Sets Page*/}
+                                <Route exact path="/sets" component={SetsContainer} />
                                 {/* Cars Pages */}
                                 {/*<Route exact path="/cars" component={CarsOverviewContainer} />*/}
                                 {/*<Route exact path="/cars/:carID" component={CarTabs} />*/}

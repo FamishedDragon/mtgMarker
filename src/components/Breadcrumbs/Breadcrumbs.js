@@ -24,23 +24,24 @@ const BreadcrumbWrapper = styled.div`
 `;
 
 const routes = {
-    '/': 'RRWT',
-    '/mysterycrates': 'Mystery Crates',
-    '/airacer': 'AI Racer',
-    '/contentmigration': 'Content Migration',
-    '/cars': 'Cars',
-    '/customcars': 'Custom ' +
-    'Cars',
-    '/collections': 'Collections',
-    '/collections/requirements': 'Requirements', // Formatting correct?
-    '/login' : 'Login',
-    '/contentPush': 'Push Content To Sandbox',
-    '/dailyQuests' : 'Daily Quests',
-    '/localization' : 'Localization Tool',
-    '/wheels': 'Wheels',
-    '/shop': 'Shop',
-    '/liveevents' : 'Live Events',
-    '/assets' : 'Asset Path Exporter'
+    '/': 'Home',
+    '/sets': 'Sets'
+    // '/mysterycrates': 'Mystery Crates',
+    // '/airacer': 'AI Racer',
+    // '/contentmigration': 'Content Migration',
+    // '/cars': 'Cars',
+    // '/customcars': 'Custom ' +
+    // 'Cars',
+    // '/collections': 'Collections',
+    // '/collections/requirements': 'Requirements', // Formatting correct?
+    // '/login' : 'Login',
+    // '/contentPush': 'Push Content To Sandbox',
+    // '/dailyQuests' : 'Daily Quests',
+    // '/localization' : 'Localization Tool',
+    // '/wheels': 'Wheels',
+    // '/shop': 'Shop',
+    // '/liveevents' : 'Live Events',
+    // '/assets' : 'Asset Path Exporter'
 };
 
 const findRouteName = (url) => {
