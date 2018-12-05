@@ -1,24 +1,24 @@
-function setsReducer(
+function cardsReducer(
     state = {
         isFetching: false,
         didInvalidate: false,
-        mtgSets: []
+        mtgCards: []
     },
     action
 ) {
     switch (action.type) {
-        case 'REQUEST_SETS':
+        case 'REQUEST_CARDS':
             return Object.assign({}, state, {
                 isFetching: true
             });
-        case 'RECEIVE_SETS':
+        case 'RECEIVE_CARDS':
             return Object.assign({}, state, {
                 isFetching: false,
-                mtgSets: action.mtgSets
+                mtgCards: action.mtgCards
             });
         default:
             return state;
     }
 }
 
-export default setsReducer;
+export default cardsReducer;
